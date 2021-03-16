@@ -34,7 +34,7 @@
 
                     <div class="text-right p-t-8 p-b-31">
                         <a href="{{ route('password.request') }}">
-                            Forgot password?
+                            Forgot Password?
                         </a>
                     </div>
                     <div class="container-login100-form-btn">

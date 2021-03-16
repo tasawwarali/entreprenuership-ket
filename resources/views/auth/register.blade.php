@@ -22,7 +22,7 @@
                         </span>
                     @enderror
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Email is reauired">
                         <span class="label-input100">Email</span>
                         <input class="input100 @error('email') is-invalid @enderror" type="text" name="email" value="{{ old('email') }}" placeholder="Type your email" required autocomplete="email">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>

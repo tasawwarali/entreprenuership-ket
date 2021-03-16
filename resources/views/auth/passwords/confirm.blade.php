@@ -1,49 +1,50 @@
-@extends('layouts.app')
+@include('layouts.header')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Confirm Password') }}</div>
+<body>
+    <div class="limiter login">
+        <div class="container-login100" >
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <form class="login100-form validate-form" method="POST" action="{{ route('password.confirm') }}">
+                    @csrf
 
-                <div class="card-body">
-                    {{ __('Please confirm your password before continuing.') }}
+                    <span class="login100-form-title p-b-49">
+                        Confirm Password Before Continuing
+                    </span>
+    
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        <input class="input100 @error('password') is-invalid @enderror" type="password" name="password" placeholder="Type your password" required autocomplete="current-password">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+                    @error('password')
+                        <span class="invalid-feedback-custom">
+                            {{ $message }}
+                        </span>
+                    @enderror
 
-                    <form method="POST" action="{{ route('password.confirm') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                    @if (Route::has('password.request'))                    
+                        <div class="text-right p-t-8 p-b-31">
+                            <a href="{{ route('password.request') }}">
+                                Forgot Password?
+                            </a>
                         </div>
+                    @endif
+                    <br>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Confirm Password') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Confirm Password
+                            </button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
-</div>
-@endsection
+    <div id="dropDownSelect1"></div>
+    @include('layouts.scripts')
+</body>
+</html>
