@@ -22,10 +22,14 @@
               <a class="nav-link" href="#">Feacture</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <!--  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <button class="btn bg-pink my-2 my-sm-0 ml-4 text-white" type="">Login</button>
-          </form>
+          @guest
+            <a href="{{ route('login') }}" class="btn bg-pink my-2 my-sm-0 ml-4 text-white">Login</a>
+          @else
+            <a href="{{ route('logout') }}" class="btn bg-pink my-2 my-sm-0 ml-4 text-white" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
+          @endguest
         </div>
       </nav>
     </div>
@@ -74,5 +78,5 @@
 
       @include('layouts.scripts')
 
-  </body>
-</html>
+    </body>
+    </html>
