@@ -2,6 +2,14 @@
 
 @section('content')
 
+@if ($user && !$user->hasVerifiedEmail())
+	<div class="alert alert-success" role="alert">
+		<div class="container">
+			A verification link has been sent to your email address. Please verify you email or  <a href="{{ route('verification.notice') }}">CLICK HERE TO REQUEST ANOTHER</a>.
+		</div>
+	</div>
+@endif
+
 <section class="home-section-1">
 	<div class="container">
 		<div class="row align-items-center">
@@ -309,32 +317,32 @@
 <section>
 	<img src="assets/img/main-img2.png" class="img-fluid">
 </section>
-  <section class="hour-support">
-  	<div class="container">
-  		<div class="row align-items-center">
-  			<div class="col-12 col-md-4">
-  				<h5>24/7 live support</h5>
-  				<h1>We’re here for you, anytime</h1>
-  			</div>
-  			<div class="col-12 col-md-8">
-  				<img src="assets/img/24 hour support.png" class="img-fluid">
-  			</div>
-  		</div>
-  	</div>
-  </section>
-  <section class="news-latter">
-  	<div class="container">
-  		<div class="row d-flex justify-content-center align-items-center rows">
-  			<div class="col-md-10">
+<section class="hour-support">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-12 col-md-4">
+				<h5>24/7 live support</h5>
+				<h1>We’re here for you, anytime</h1>
+			</div>
+			<div class="col-12 col-md-8">
+				<img src="assets/img/24 hour support.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="news-latter">
+	<div class="container">
+		<div class="row d-flex justify-content-center align-items-center rows">
+			<div class="col-md-10">
 
-  				<div class="text-center"> <img src="https://i.imgur.com/Dh7U4bp.png" width="200"> <span class="d-block mt-3">Subscribe to our newsletter in order not to miss new arrivals <br> promotions and discounts of our store</span>
-  					<div class="">
-  						<div class="input-group mb-3 mt-4"> <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2"> <button class="btn btn-theme border-rad px-5" type="button" id="button-addon2">Subscribe</button> </div>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  </section>
+				<div class="text-center"> <img src="https://i.imgur.com/Dh7U4bp.png" width="200"> <span class="d-block mt-3">Subscribe to our newsletter in order not to miss new arrivals <br> promotions and discounts of our store</span>
+					<div class="">
+						<div class="input-group mb-3 mt-4"> <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2"> <button class="btn btn-theme border-rad px-5" type="button" id="button-addon2">Subscribe</button> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-  @endsection
+@endsection

@@ -2,27 +2,28 @@
 
 <body>
     <div class="limiter login">
-        <h1>Verify Your Email Address</h1>
         <div class="container-login100" >
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
                 @if (session('resent'))
                     <div class="alert alert-success" role="alert">
-                        'A fresh verification link has been sent to your email address.
+                        A fresh verification link has been sent to your email address.
                     </div>
                 @endif
-                <form class="login100-form validate-form" method="POST" action="{{ route('password.resend') }}">
+                <form class="login100-form validate-form" method="POST" action="{{ route('verification.resend') }}">
                     @csrf
 
                     <span class="login100-form-title p-b-49">
-                        Request Another
+                        Verify Your Email Address
                     </span>
 
-                    <div class="wrap-input100 validate-input m-b-23">
-                        <span class="label-input100">Before proceeding, please check your email for a verification link.</span>
+                    <div>
+                        Before proceeding, please check your email for a verification link.
                     </div>
 
+                    <br>
+
                     <div>
-                        If you did not receive the email
+                        If you did not receive the email.
                     </div>
                     <br>
 

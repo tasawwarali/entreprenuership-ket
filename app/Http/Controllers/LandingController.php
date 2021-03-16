@@ -23,6 +23,9 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('landing');
+        $data = [
+            'user' => @\Auth::user()
+        ];
+        return view('landing', $data);
     }
 }
