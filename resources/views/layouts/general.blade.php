@@ -1,0 +1,78 @@
+  @include('layouts.header')
+
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand f-Lobster" href="#"> Favoo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Feacture</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!--  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button class="btn bg-pink my-2 my-sm-0 ml-4 text-white" type="">Login</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+
+    @yield('content')
+
+    <footer class="footer">
+      <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+        <div class="row my-5 justify-content-center py-5">
+          <div class="col-11">
+            <div class="row  text-center">
+              <div class=" col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                <h3 class="text-muted mb-md-0 mb-5 bold-text">Favoo</h3>
+              </div>
+              <div class=" col-md-4 col-sm-4 col-12">
+                <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                <ul class="list-unstyled">
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Blog</li>
+                  <li>Portfolio</li>
+                </ul>
+              </div>
+              <div class=" col-md-4 col-sm-4 col-12">
+                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                <p class="mb-1">605, RATAN ICON BUILDING</p>
+                <p>SEAWOODS SECTOR</p>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class=" col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Pepper All Rights Reserved.</small>
+              </div>
+              <div class="col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                <h6 class="mt-55 mt-2 text-muted bold-text"><b>ANIRUDH SINGLA</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> anirudh@gmail.com</small>
+              </div>
+              <div class=" col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                <h6 class="text-muted bold-text"><b>RISHABH SHEKHAR</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> rishab@gmail.com</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      @include('layouts.scripts')
+
+  </body>
+</html>
