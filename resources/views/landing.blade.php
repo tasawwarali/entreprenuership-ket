@@ -3,7 +3,7 @@
 @section('content')
 
 @if ($user && !$user->hasVerifiedEmail())
-	<div class="alert alert-success" role="alert">
+	<div class="alert alert-warning" role="alert">
 		<div class="container">
 			A verification link has been sent to your email address. Please verify you email or  <a href="{{ route('verification.notice') }}">CLICK HERE TO REQUEST ANOTHER</a>.
 		</div>
